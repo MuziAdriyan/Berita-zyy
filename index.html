@@ -1,994 +1,925 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Muzi Adriyan — Detail Berita</title>
-
-<meta name="description" content="Berita terbaru dan informasi terkini dari Muzi Adriyan.">
-<meta name="author" content="Muzi Adriyan">
-<meta name="theme-color" content="#e21d2a">
-
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#eeeeee;
-    color:#333;
-    line-height:1.6;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.header{
-    width:100%;
-    background:#fff;
-    padding:20px 0 0;
-}
-
-.header-inner{
-    width:92%;
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    text-decoration:none;
-}
-
-.logo-mark{
-    width:42px;
-    height:42px;
-    background:#e21d2a;
-    color:white;
-    border-radius:8px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:25px;
-    font-weight:900;
-    transform:rotate(-8deg);
-}
-
-.logo-text{
-    font-size:28px;
-    font-weight:900;
-    color:#222;
-    letter-spacing:-1px;
-}
-
-.logo-text span{
-    color:#e21d2a;
-}
-
-.logo-sub{
-    font-size:10px;
-    color:#777;
-    letter-spacing:2px;
-    margin-top:-5px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar{
-    width:92%;
-    max-width:1100px;
-    height:58px;
-    margin:25px auto 0;
-    background:#df202b;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    padding:0 15px;
-}
-
-.nav-links{
-    display:flex;
-    gap:30px;
-    margin-right:auto;
-    padding-left:20px;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:bold;
-}
-
-.menu-button{
-    width:48px;
-    height:42px;
-    border:1px solid rgba(255,255,255,.35);
-    background:rgba(255,255,255,.04);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:5px;
-    cursor:pointer;
-}
-
-.menu-button span{
-    display:block;
-    width:25px;
-    height:2px;
-    background:white;
-}
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu{
-    display:none;
-    width:92%;
-    max-width:1100px;
-    margin:auto;
-    background:#c91824;
-}
-
-.mobile-menu.active{
-    display:block;
-}
-
-.mobile-menu a{
-    display:block;
-    padding:13px 20px;
-    color:white;
-    text-decoration:none;
-    border-bottom:1px solid rgba(255,255,255,.15);
-}
-
-/* =========================
-   MAIN
-========================= */
-
-.container{
-    width:92%;
-    max-width:850px;
-    margin:40px auto 80px;
-}
-
-.breadcrumb{
-    color:#888;
-    font-size:14px;
-    margin-bottom:25px;
-}
-
-.breadcrumb a{
-    color:#a83b43;
-    text-decoration:none;
-}
-
-.breadcrumb span{
-    margin:0 8px;
-}
-
-/* =========================
-   ARTICLE
-========================= */
-
-.article{
-    background:#fff;
-    padding:30px;
-    border-radius:4px;
-    box-shadow:0 2px 8px rgba(0,0,0,.05);
-}
-
-.category{
-    display:inline-block;
-    color:#df202b;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:12px;
-    text-transform:uppercase;
-}
-
-.article-title{
-    font-size:46px;
-    line-height:1.12;
-    color:#303030;
-    font-weight:700;
-    margin-bottom:12px;
-}
-
-.meta{
-    color:#888;
-    font-size:14px;
-    margin-bottom:18px;
-}
-
-.meta strong{
-    color:#555;
-}
-
-/* =========================
-   IMAGE
-========================= */
-
-.hero{
-    position:relative;
-    width:100%;
-    overflow:hidden;
-    border-radius:15px;
-    background:#ddd;
-}
-
-.hero img{
-    display:block;
-    width:100%;
-    height:auto;
-    min-height:320px;
-    object-fit:cover;
-}
-
-.image-caption{
-    background:white;
-    padding:10px 14px;
-    color:#777;
-    font-size:12px;
-    border-left:4px solid #df202b;
-}
-
-/* =========================
-   SOCIAL QUOTE
-========================= */
-
-.social-quote{
-    position:absolute;
-    right:12px;
-    bottom:15px;
-    width:260px;
-    background:#fff;
-    color:#111;
-    padding:14px 16px;
-    border-radius:8px;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
-    font-size:17px;
-    line-height:1.25;
-    font-weight:700;
-}
-
-.social-quote small{
-    display:block;
-    color:#df202b;
-    margin-top:7px;
-    font-size:13px;
-}
-
-/* =========================
-   ARTICLE BODY
-========================= */
-
-.article-body{
-    margin-top:28px;
-}
-
-.article-body p{
-    font-size:17px;
-    line-height:1.85;
-    margin-bottom:20px;
-    color:#444;
-}
-
-.article-body .lead{
-    font-weight:500;
-    font-size:18px;
-}
-
-.article-body h2{
-    font-size:25px;
-    margin:30px 0 14px;
-    color:#222;
-}
-
-.article-body blockquote{
-    margin:25px 0;
-    padding:18px 20px;
-    background:#f5f5f5;
-    border-left:5px solid #df202b;
-    font-size:18px;
-    font-style:italic;
-    color:#555;
-}
-
-/* =========================
-   SHARE
-========================= */
-
-.share{
-    border-top:1px solid #eee;
-    margin-top:30px;
-    padding-top:20px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.share strong{
-    margin-right:5px;
-}
-
-.share button{
-    border:0;
-    background:#222;
-    color:#fff;
-    padding:9px 14px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:13px;
-}
-
-.share button:hover{
-    opacity:.8;
-}
-
-/* =========================
-   RELATED
-========================= */
-
-.related{
-    margin-top:30px;
-}
-
-.related-title{
-    font-size:22px;
-    margin-bottom:15px;
-    color:#222;
-}
-
-.related-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.related-card{
-    background:#fff;
-    padding:18px;
-    border-radius:8px;
-    box-shadow:0 2px 8px rgba(0,0,0,.05);
-}
-
-.related-card .tag{
-    color:#df202b;
-    font-size:11px;
-    font-weight:bold;
-}
-
-.related-card h3{
-    font-size:17px;
-    line-height:1.35;
-    margin-top:5px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#202020;
-    color:#aaa;
-    text-align:center;
-    padding:30px 20px;
-    font-size:13px;
-}
-
-footer strong{
-    color:white;
-}
-
-/* =========================
-   DESKTOP
-========================= */
-
-@media(min-width:900px){
-
-    .article{
-        padding:40px;
-    }
-
-    .hero img{
-        max-height:560px;
-    }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
-
-    body{
-        background:#f1f1f1;
-    }
-
-    .header{
-        padding-top:15px;
-    }
-
-    .header-inner{
-        width:90%;
-    }
-
-    .logo-mark{
-        width:35px;
-        height:35px;
-        font-size:21px;
-    }
-
-    .logo-text{
-        font-size:23px;
-    }
-
-    .logo-sub{
-        font-size:8px;
-    }
-
-    .navbar{
-        width:90%;
-        height:58px;
-        margin-top:20px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .container{
-        width:90%;
-        margin-top:30px;
-    }
-
-    .breadcrumb{
-        font-size:13px;
-        margin-bottom:20px;
-    }
-
-    .article{
-        padding:0;
-        background:transparent;
-        box-shadow:none;
-    }
-
-    .category{
-        font-size:12px;
-    }
-
-    .article-title{
-        font-size:39px;
-        line-height:1.12;
-        margin-bottom:10px;
-    }
-
-    .meta{
-        font-size:13px;
-    }
-
-    .hero{
-        border-radius:14px;
-    }
-
-    .hero img{
-        min-height:0;
-        max-height:none;
-    }
-
-    .social-quote{
-        width:215px;
-        right:8px;
-        bottom:10px;
-        padding:11px 12px;
-        font-size:15px;
-    }
-
-    .social-quote small{
-        font-size:11px;
-    }
-
-    .image-caption{
-        font-size:11px;
-        padding:8px 10px;
-    }
-
-    .article-body{
-        background:#fff;
-        padding:22px 18px;
-        margin-top:10px;
-        border-radius:5px;
-    }
-
-    .article-body p{
-        font-size:16px;
-        line-height:1.75;
-    }
-
-    .article-body .lead{
-        font-size:17px;
-    }
-
-    .article-body h2{
-        font-size:22px;
-    }
-
-    .share{
-        padding:18px 0;
-    }
-
-    .related-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-/* =========================
-   VERY SMALL PHONE
-========================= */
-
-@media(max-width:380px){
-
-    .article-title{
-        font-size:34px;
-    }
-
-    .social-quote{
-        width:190px;
-        font-size:13px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Title dan Description -->
+    <title>Muzi Adriyan — Developer, Analyst & Investor | Berita Teknologi Digital</title>
+    <meta name="description" content="Muzi Adriyan adalah developer, analyst, dan investor yang aktif mengembangkan website, aplikasi, teknologi digital, serta mempelajari analisis pasar dan investasi.">
+    <meta name="keywords" content="Muzi Adriyan, developer, analyst, investor, teknologi digital, web development, aplikasi, dashboard">
+    <meta name="author" content="Muzi Adriyan">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://muziadriyan.github.io/Berita-zyy/">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#DC2626">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Muzi Adriyan Bangun Berbagai Proyek Digital, Bukti Anak Muda Aktif Berkarya di Era Teknologi">
+    <meta property="og:description" content="Berawal dari ketertarikan terhadap dunia teknologi dan pemrograman, Muzi Adriyan terus mengembangkan berbagai proyek digital yang menggabungkan teknologi modern dengan kebutuhan pengguna.">
+    <meta property="og:url" content="https://muziadriyan.github.io/Berita-zyy/">
+    <meta property="og:site_name" content="Muzi Adriyan">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/DC2626/FFFFFF?text=Muzi+Adriyan+Developer">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Muzi Adriyan Bangun Berbagai Proyek Digital">
+    <meta name="twitter:description" content="Berawal dari ketertarikan terhadap dunia teknologi dan pemrograman, Muzi Adriyan terus mengembangkan berbagai proyek digital.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/DC2626/FFFFFF?text=Muzi+Adriyan+Developer">
+    
+    <!-- Language -->
+    <meta http-equiv="content-language" content="id">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' fill='%23DC2626'>M</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #DC2626;
+            --secondary-color: #991B1B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --background-light: #F9FAFB;
+            --border-color: #E5E7EB;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            overflow-x: hidden;
+        }
+
+        /* Header Sticky */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2.5px;
+            background-color: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 768px;
+            margin: 16px auto;
+            padding: 0 16px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 4px;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+
+        /* Article Header */
+        .article-header {
+            margin-bottom: 24px;
+        }
+
+        .article-headline {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .article-summary {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-light);
+            font-style: italic;
+            padding: 16px;
+            background-color: var(--background-light);
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .meta-item {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* Article Image */
+        .article-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: #f0f0f0;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 12px;
+            color: var(--text-light);
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 24px;
+            padding: 0 8px;
+        }
+
+        /* Article Content */
+        .article-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .article-content p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .article-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 28px 0 16px 0;
+            line-height: 1.3;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 24px 0 12px 0;
+        }
+
+        .article-content blockquote {
+            font-size: 16px;
+            font-style: italic;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 16px;
+            margin: 20px 0;
+            background-color: var(--background-light);
+        }
+
+        /* Share Buttons */
+        .share-section {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 28px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .share-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .share-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .share-btn {
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: var(--white);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        /* Related Articles */
+        .related-section {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .related-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .related-articles {
+            display: grid;
+            gap: 16px;
+        }
+
+        .related-card {
+            padding: 16px;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .related-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .related-card p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Reading Progress */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: var(--primary-color);
+            width: 0%;
+            z-index: 101;
+            transition: width 0.1s ease;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-4px);
+        }
+
+        .scroll-to-top.show {
+            display: flex;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 40px 16px;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .footer-content {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+            color: #D1D5DB;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background-color: #374151;
+            margin: 20px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #D1D5DB;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Mobile Menu */
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px;
+            list-style: none;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: block;
+            padding: 8px 0;
+        }
+
+        .mobile-nav a:active {
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .article-headline {
+                font-size: 26px;
+            }
+
+            .share-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                padding: 12px 12px;
+            }
+
+            .container {
+                padding: 16px 12px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .header-container {
+                max-width: none;
+                padding: 16px 40px;
+            }
+
+            .container {
+                max-width: none;
+                padding: 32px 40px;
+            }
+
+            .breadcrumb {
+                max-width: none;
+                padding: 0 40px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="readingProgress"></div>
 
-<!-- =========================
-     HEADER
-========================= -->
-
-<header class="header">
-
-    <div class="header-inner">
-
-        <a href="#" class="logo">
-
-            <div class="logo-mark">
-                M
-            </div>
-
-            <div>
-                <div class="logo-text">
-                    Muzi <span>Adriyan</span>
-                </div>
-
-                <div class="logo-sub">
-                    MNC.COM
-                </div>
-            </div>
-
-        </a>
-
-    </div>
-
-    <!-- NAVBAR -->
-
-    <nav class="navbar">
-
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">News</a>
-            <a href="#">Daerah</a>
-            <a href="#">Teknologi</a>
-            <a href="#">Bisnis</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">Muzi Adriyan</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu navigasi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="#teknologi">Teknologi</a></li>
+                <li><a href="#investasi">Investasi</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+            </nav>
         </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="/">Beranda</a>
+            <a href="#teknologi">Teknologi</a>
+            <a href="#investasi">Investasi</a>
+            <a href="#tentang">Tentang</a>
+        </nav>
+    </header>
 
-        <button class="menu-button" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </nav>
-
-    <!-- MOBILE MENU -->
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#">Home</a>
-        <a href="#">News</a>
-        <a href="#">Daerah</a>
-        <a href="#">Teknologi</a>
-        <a href="#">Bisnis</a>
-    </div>
-
-</header>
-
-
-<!-- =========================
-     MAIN CONTENT
-========================= -->
-
-<main class="container">
-
-    <!-- BREADCRUMB -->
-
+    <!-- Breadcrumb -->
     <div class="breadcrumb">
-
-        <a href="#">News</a>
-
+        <span><a href="/">Beranda</a></span>
         <span>/</span>
-
-        <a href="#">Daerah</a>
-
+        <span><a href="#teknologi">Teknologi</a></span>
         <span>/</span>
-
-        Detail Berita
-
+        <span>Detail Berita</span>
     </div>
 
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Article Header -->
+        <article itemscope itemtype="https://schema.org/NewsArticle">
+            <div class="article-header">
+                <h1 class="article-headline" itemprop="headline">Muzi Adriyan Bangun Berbagai Proyek Digital, Bukti Anak Muda Aktif Berkarya di Era Teknologi</h1>
+                
+                <div class="article-summary" itemprop="description">
+                    Berawal dari ketertarikan terhadap dunia teknologi dan pemrograman, Muzi Adriyan terus mengembangkan berbagai proyek digital, mulai dari website hingga dashboard interaktif yang menggabungkan teknologi modern dengan kebutuhan pengguna.
+                </div>
 
-    <!-- ARTICLE -->
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <strong>Penulis:</strong>
+                        <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <span itemprop="name">Muzi Adriyan</span>
+                        </span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Tanggal:</strong>
+                        <time itemprop="datePublished" datetime="2026-08-23T13:30:00+07:00">23 Agustus 2026</time>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Waktu:</strong>
+                        <span>13:30 WIB</span>
+                    </div>
+                </div>
+            </div>
 
-    <article class="article">
-
-        <div class="category">
-            Daerah
-        </div>
-
-        <h1 class="article-title">
-            <h1 class="article-title">
-            Muzi Adriyan — Developer, Analyst & Investor
-</h1>
-        </h1>
-
-        <div class="meta">
-
-            <strong>Muzi Adriyan</strong>
-
-            • Minggu, 23 Agustus 2026
-            • 12:37 WIB
-
-        </div>
-
-
-        <!-- HERO IMAGE -->
-
-        <div class="hero">
-
-            <img
-                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=85"
-                alt="Ilustrasi kegiatan pendidikan dan sekolah"
+            <!-- Article Image -->
+            <img 
+                src="https://via.placeholder.com/768x432/DC2626/FFFFFF?text=Muzi+Adriyan+Developer" 
+                alt="Muzi Adriyan, developer dan analyst dalam kegiatan pengembangan proyek digital" 
+                title="Muzi Adriyan mengembangkan proyek teknologi digital"
+                class="article-image" 
+                width="768" 
+                height="432"
+                loading="eager"
+                itemprop="image"
             >
+            <p class="image-caption">Muzi Adriyan aktif mengembangkan berbagai proyek digital dan teknologi modern untuk memenuhi kebutuhan pasar digital. (Foto Ilustrasi)</p>
 
-            <div class="social-quote">
+            <!-- Article Content -->
+            <div class="article-content" itemprop="articleBody">
+                <p>
+                    Perkembangan teknologi digital di Indonesia menciptakan peluang bagi generasi muda untuk berkontribusi dan berinovasi. Salah satu figur yang aktif memanfaatkan kesempatan ini adalah Muzi Adriyan, seorang developer, analyst, dan investor yang terus mengembangkan berbagai proyek teknologi digital dengan fokus pada solusi praktis dan inovatif.
+                </p>
 
-                Mungkin bagi yang tinggal di kota ini sederhana...
+                <p>
+                    Muzi Adriyan memulai perjalanannya di dunia teknologi dengan ketertarikan yang mendalam terhadap pemrograman dan pengembangan web. Sejak awal, ia menyadari bahwa teknologi digital bukan hanya tentang kode dan algoritma, tetapi juga tentang memahami kebutuhan pengguna dan menciptakan solusi yang memberikan nilai tambah nyata dalam kehidupan sehari-hari.
+                </p>
 
-                tapi buat anak-anak di daerah,
-                pendidikan bisa sangat bermakna.
+                <h2>Aktif Mengembangkan Teknologi Digital</h2>
 
-                <small>
-                    @MuziAdriyan
-                </small>
+                <p>
+                    Sebagai seorang developer, Muzi Adriyan berfokus pada pengembangan website dan aplikasi yang dirancang dengan standar profesional. Dalam perjalanan ini, ia menguasai berbagai teknologi seperti HTML, CSS, dan JavaScript untuk menciptakan pengalaman pengguna yang optimal. Proyek-proyeknya mencerminkan komitmen terhadap detail dan kualitas dalam setiap aspek pengembangan.
+                </p>
 
+                <p>
+                    Tidak hanya website statis, Muzi juga mengembangkan dashboard interaktif yang menggabungkan visualisasi data dengan interface yang user-friendly. Dashboard-dashboard ini dirancang untuk membantu pengguna memahami data kompleks dengan cara yang lebih intuitif dan mudah dipahami. Pendekatan ini menunjukkan bahwa Muzi memahami bahwa teknologi terbaik adalah teknologi yang dapat digunakan oleh siapa saja tanpa kesulitan.
+                </p>
+
+                <blockquote>
+                    "Teknologi adalah alat untuk menyelesaikan masalah dan meningkatkan efisiensi. Fokus saya adalah memastikan bahwa setiap proyek yang saya buat memberikan nilai nyata kepada pengguna," ungkapan yang mencerminkan filosofi kerja Muzi Adriyan dalam mengembangkan solusi digital.
+                </blockquote>
+
+                <p>
+                    Dalam perkembangannya, Muzi terus mempelajari tren teknologi terbaru dan mencoba mengintegrasikannya dalam proyek-proyeknya. Dari framework JavaScript modern hingga teknik optimisasi performa website, Muzi selalu berusaha untuk berada di garis depan inovasi teknologi.
+                </p>
+
+                <h2>Ketertarikan pada Analisis dan Investasi</h2>
+
+                <p>
+                    Melampaui peran sebagai developer, Muzi Adriyan juga mengembangkan keahlian di bidang analisis pasar dan investasi. Pemahaman mendalam tentang data dan tren pasar menjadi fondasi penting dalam setiap keputusan bisnis yang ia ambil. Muzi menyadari bahwa kesuksesan jangka panjang memerlukan lebih dari sekedar kemampuan teknis dalam coding.
+                </p>
+
+                <p>
+                    Ketertarikan Muzi pada analisis pasar mendorong dirinya untuk mempelajari dinamika ekonomi digital, pergerakan aset digital, dan peluang investasi dalam ekosistem teknologi. Melalui pendekatan yang data-driven, Muzi berusaha mengidentifikasi peluang-peluang pertumbuhan dan membuat keputusan investasi yang informed dan strategis.
+                </p>
+
+                <p>
+                    Eksplorasi di bidang investasi juga mencerminkan visi Muzi yang lebih luas tentang ekosistem bisnis digital. Sebagai seorang developer yang memahami teknologi, Muzi memiliki perspektif unik dalam menganalisis potensi investasi di sektor teknologi dan aset digital. Kombinasi antara keahlian teknis dan pemahaman pasar ini menjadi keunggulan kompetitif dalam aktivitas investasinya.
+                </p>
+
+                <h2>Membangun Proyek Secara Mandiri</h2>
+
+                <p>
+                    Salah satu aspek yang menonjol dari perjalanan Muzi Adriyan adalah kemampuannya dalam membangun proyek secara mandiri, dari konsep awal hingga implementasi. Proses ini memerlukan tidak hanya kemampuan teknis, tetapi juga disiplin, dedikasi, dan kemampuan dalam manajemen proyek.
+                </p>
+
+                <p>
+                    Muzi menghabiskan waktu untuk belajar dari setiap proyek yang dikerjakan, mengidentifikasi tantangan yang dihadapi, dan mencari solusi kreatif untuk mengatasinya. Proses iteratif ini menciptakan lingkaran pembelajaran berkelanjutan yang mendorong peningkatan kualitas dengan setiap proyek yang dikerjakan.
+                </p>
+
+                <p>
+                    Dalam proses pengembangan proyek, Muzi juga memperhatikan aspek user experience dan design thinking. Ia memahami bahwa pengembangan teknologi yang sukses adalah yang dapat diakses dan digunakan oleh audiens target dengan efisien. Filosofi ini tercermin dalam setiap detail desain dan fungsionalitas proyek yang ia bangun.
+                </p>
+
+                <h2>Peluang Anak Muda di Era Digital</h2>
+
+                <p>
+                    Perjalanan Muzi Adriyan mencerminkan peluang yang tersedia bagi anak muda Indonesia di era digital ini. Dengan akses ke pengetahuan yang luas melalui internet dan kemudahan dalam membangun dan meluncurkan proyek digital, generasi muda memiliki kesempatan untuk berkontribusi pada transformasi digital negara.
+                </p>
+
+                <p>
+                    Tidak ada lagi batasan geografis atau keterbatasan akses yang menghalangi anak muda untuk belajar, bereksperimen, dan menciptakan. Teknologi telah membuka pintu bagi siapa saja yang memiliki motivasi dan dedikasi untuk belajar dan berinovasi. Muzi Adriyan adalah salah satu contoh dari banyak anak muda yang memanfaatkan peluang ini dengan serius.
+                </p>
+
+                <p>
+                    Ke depannya, dengan terus mengembangkan kemampuan di bidang teknologi, analisis, dan investasi, Muzi Adriyan memposisikan dirinya untuk berkontribusi lebih besar pada ekosistem startup dan teknologi digital Indonesia. Perjalanan yang ia jalani bukan hanya tentang kesuksesan personal, tetapi juga tentang menunjukkan kepada anak muda lainnya bahwa dengan kerja keras dan dedikasi, mereka juga dapat menciptakan dampak positif di era digital ini.
+                </p>
+
+                <p>
+                    Muzi Adriyan membuktikan bahwa menjadi developer, analyst, dan investor bukan hanya tentang mengejar kesuksesan finansial, tetapi juga tentang dedikasi terhadap pembelajaran berkelanjutan dan kontribusi positif terhadap ekosistem teknologi. Kisahnya menjadi inspirasi bagi banyak anak muda yang ingin mengejar karir di bidang teknologi digital dan investasi.
+                </p>
             </div>
 
-        </div>
-
-
-        <div class="image-caption">
-            Ilustrasi kegiatan pendidikan dan pembangunan sekolah.
-            Foto: Muzi Adriyan
-        </div>
-
-
-        <!-- ARTICLE BODY -->
-
-        <div class="article-body">
-
-            <p class="lead">
-
-                SUMBA TIMUR — Perhatian terhadap dunia pendidikan
-                kembali menjadi sorotan. Pembangunan fasilitas
-                pendidikan di daerah menjadi salah satu langkah
-                penting untuk memberikan kesempatan belajar yang
-                lebih baik bagi anak-anak.
-
-            </p>
-
-            <p>
-
-                Kehadiran sekolah yang layak tidak hanya menjadi
-                tempat bagi siswa untuk mendapatkan pendidikan,
-                tetapi juga menjadi bagian penting dalam membangun
-                masa depan masyarakat di daerah.
-
-            </p>
-
-            <p>
-
-                Dalam kegiatan tersebut, pembangunan sekolah
-                menjadi simbol kepedulian terhadap pendidikan.
-                Anak-anak di daerah diharapkan dapat memiliki
-                lingkungan belajar yang lebih nyaman, aman,
-                dan mendukung proses belajar mereka.
-
-            </p>
-
-            <blockquote>
-
-                “Pendidikan bukan hanya tentang bangunan sekolah,
-                tetapi tentang memberikan kesempatan kepada anak-anak
-                untuk memiliki masa depan yang lebih baik.”
-
-            </blockquote>
-
-            <h2>
-                Pendidikan menjadi perhatian
-            </h2>
-
-            <p>
-
-                Pembangunan fasilitas pendidikan di wilayah yang
-                membutuhkan perhatian menjadi langkah yang memiliki
-                dampak jangka panjang.
-
-                Dengan fasilitas yang lebih memadai, siswa dapat
-                mengikuti kegiatan belajar dengan lebih nyaman dan
-                para tenaga pendidik juga dapat menjalankan proses
-                pembelajaran secara lebih optimal.
-
-            </p>
-
-            <p>
-
-                Masyarakat berharap berbagai upaya untuk meningkatkan
-                kualitas pendidikan dapat terus dilakukan dan
-                menjangkau lebih banyak wilayah di Indonesia.
-
-            </p>
-
-            <p>
-
-                Kisah tersebut juga menjadi pengingat bahwa
-                pendidikan memiliki peran besar dalam membuka
-                kesempatan bagi generasi muda untuk berkembang.
-
-            </p>
-
-            <h2>
-                Harapan untuk generasi muda
-            </h2>
-
-            <p>
-
-                Setiap anak memiliki hak untuk mendapatkan pendidikan
-                yang layak. Dukungan dari berbagai pihak menjadi
-                bagian penting untuk mewujudkan lingkungan pendidikan
-                yang lebih baik.
-
-            </p>
-
-            <p>
-
-                Dengan adanya perhatian terhadap pendidikan,
-                diharapkan semakin banyak anak-anak di berbagai
-                daerah dapat mengejar cita-cita dan membangun
-                masa depan mereka.
-
-            </p>
-
-        </div>
-
-
-        <!-- SHARE -->
-
-        <div class="share">
-
-            <strong>Bagikan:</strong>
-
-            <button onclick="shareWhatsApp()">
-                WhatsApp
-            </button>
-
-            <button onclick="shareFacebook()">
-                Facebook
-            </button>
-
-            <button onclick="copyLink()">
-                Salin Link
-            </button>
-
-        </div>
-
-    </article>
-
-
-    <!-- =========================
-         RELATED NEWS
-    ========================= -->
-
-    <section class="related">
-
-        <h2 class="related-title">
-            Berita Terkait
-        </h2>
-
-        <div class="related-grid">
-
-            <div class="related-card">
-
-                <div class="tag">
-                    PENDIDIKAN
+            <!-- Share Section -->
+            <div class="share-section">
+                <div class="share-title">Bagikan Artikel Ini</div>
+                <div class="share-buttons">
+                    <a href="https://wa.me/?text=Muzi%20Adriyan%20Bangun%20Berbagai%20Proyek%20Digital%20https://muziadriyan.github.io/Berita-zyy/" class="share-btn" target="_blank" rel="noopener noreferrer">
+                        <span>💬</span> WhatsApp
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://muziadriyan.github.io/Berita-zyy/" class="share-btn" target="_blank" rel="noopener noreferrer">
+                        <span>f</span> Facebook
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Muzi%20Adriyan%20Bangun%20Berbagai%20Proyek%20Digital&url=https://muziadriyan.github.io/Berita-zyy/" class="share-btn" target="_blank" rel="noopener noreferrer">
+                        <span>𝕏</span> Twitter
+                    </a>
+                    <button class="share-btn" id="copyLinkBtn">
+                        <span>🔗</span> Salin Link
+                    </button>
                 </div>
-
-                <h3>
-                    Pendidikan di Daerah Terus Mendapat Perhatian
-                </h3>
-
             </div>
 
-
-            <div class="related-card">
-
-                <div class="tag">
-                    DAERAH
+            <!-- Related Articles -->
+            <section class="related-section">
+                <h2 class="related-title">Berita Terkait</h2>
+                <div class="related-articles">
+                    <a href="#" class="related-card">
+                        <h3>Tren Teknologi Web Development di 2026: Apa yang Berubah?</h3>
+                        <p>Perkembangan framework dan tools baru dalam dunia web development terus menciptakan ekosistem yang dinamis...</p>
+                    </a>
+                    <a href="#" class="related-card">
+                        <h3>Dashboard Interaktif: Cara Efektif Visualisasi Data untuk Pengambilan Keputusan</h3>
+                        <p>Dashboard yang baik bukan hanya tentang tampilan cantik, tetapi tentang menyampaikan informasi dengan jelas...</p>
+                    </a>
+                    <a href="#" class="related-card">
+                        <h3>Investasi di Era Digital: Peluang dan Tantangan untuk Anak Muda</h3>
+                        <p>Teknologi blockchain dan aset digital membuka peluang investasi yang belum pernah ada sebelumnya...</p>
+                    </a>
                 </div>
+            </section>
+        </article>
+    </main>
 
-                <h3>
-                    Semangat Anak-Anak Daerah Mengejar Pendidikan
-                </h3>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Muzi Adriyan</div>
+            <p>Portal Berita dan Informasi Teknologi Digital, Analisis Pasar, serta Investasi</p>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="#beranda">Beranda</a>
+                <a href="#teknologi">Teknologi</a>
+                <a href="#investasi">Investasi</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#kontak">Kontak</a>
             </div>
-
-
-            <div class="related-card">
-
-                <div class="tag">
-                    NEWS
-                </div>
-
-                <h3>
-                    Fasilitas Sekolah Menjadi Perhatian Masyarakat
-                </h3>
-
-            </div>
-
-
-            <div class="related-card">
-
-                <div class="tag">
-                    INSPIRASI
-                </div>
-
-                <h3>
-                    Kisah Inspiratif dari Dunia Pendidikan Indonesia
-                </h3>
-
-            </div>
-
+            <p>&copy; 2026 Muzi Adriyan. Semua hak dilindungi.</p>
+            <p style="font-size: 12px; margin-top: 12px; color: #9CA3AF;">Dikembangkan dengan fokus pada teknologi dan inovasi digital</p>
         </div>
+    </footer>
 
-    </section>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Kembali ke atas">
+        ↑
+    </button>
 
-</main>
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "Muzi Adriyan",
+                "url": "https://muziadriyan.github.io/Berita-zyy/",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://muziadriyan.github.io/Berita-zyy/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "name": "Muzi Adriyan — Developer, Analyst & Investor",
+                "url": "https://muziadriyan.github.io/Berita-zyy/",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Muzi Adriyan",
+                    "url": "https://muziadriyan.github.io/Berita-zyy/"
+                }
+            },
+            {
+                "@type": "NewsArticle",
+                "headline": "Muzi Adriyan Bangun Berbagai Proyek Digital, Bukti Anak Muda Aktif Berkarya di Era Teknologi",
+                "description": "Berawal dari ketertarikan terhadap dunia teknologi dan pemrograman, Muzi Adriyan terus mengembangkan berbagai proyek digital, mulai dari website hingga dashboard interaktif yang menggabungkan teknologi modern dengan kebutuhan pengguna.",
+                "image": "https://via.placeholder.com/1200x630/DC2626/FFFFFF?text=Muzi+Adriyan+Developer",
+                "datePublished": "2026-08-23T13:30:00+07:00",
+                "dateModified": "2026-08-23T13:30:00+07:00",
+                "author": {
+                    "@type": "Person",
+                    "name": "Muzi Adriyan"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Muzi Adriyan",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://via.placeholder.com/200x200/DC2626/FFFFFF?text=MA",
+                        "width": 200,
+                        "height": 200
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://muziadriyan.github.io/Berita-zyy/"
+                }
+            },
+            {
+                "@type": "Person",
+                "name": "Muzi Adriyan",
+                "jobTitle": ["Developer", "Analyst", "Investor"],
+                "description": "Developer, Analyst, dan Investor yang aktif mengembangkan proyek teknologi digital, website, aplikasi, dashboard, serta mempelajari analisis pasar dan investasi.",
+                "url": "https://muziadriyan.github.io/Berita-zyy/",
+                "knowsAbout": [
+                    "Web Development",
+                    "Aplikasi Digital",
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                    "Analisis Pasar",
+                    "Investasi Digital",
+                    "Dashboard Interaktif"
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Beranda",
+                        "item": "https://muziadriyan.github.io/Berita-zyy/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Teknologi",
+                        "item": "https://muziadriyan.github.io/Berita-zyy/#teknologi"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Detail Berita",
+                        "item": "https://muziadriyan.github.io/Berita-zyy/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 
+    <!-- JavaScript -->
+    <script>
+        // Hamburger Menu
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileNav = document.getElementById('mobileNav');
 
-<!-- =========================
-     FOOTER
-========================= -->
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
 
-<footer>
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
 
-    <strong>Muzi Adriyan</strong>
+        // Reading Progress Bar
+        const readingProgress = document.getElementById('readingProgress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            readingProgress.style.width = scrolled + '%';
+        });
 
-    <br>
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
 
-    News & Digital
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-    <br><br>
+        // Copy Link Button
+        const copyLinkBtn = document.getElementById('copyLinkBtn');
+        copyLinkBtn.addEventListener('click', () => {
+            const url = 'https://muziadriyan.github.io/Berita-zyy/';
+            navigator.clipboard.writeText(url).then(() => {
+                const originalText = copyLinkBtn.innerHTML;
+                copyLinkBtn.innerHTML = '<span>✓</span> Berhasil Disalin';
+                setTimeout(() => {
+                    copyLinkBtn.innerHTML = originalText;
+                }, 2000);
+            }).catch(() => {
+                alert('Gagal menyalin link');
+            });
+        });
 
-    © 2026 Muzi Adriyan. All rights reserved.
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
 
-</footer>
-
-
-<script>
-
-/* =========================
-   MENU
-========================= */
-
-function toggleMenu(){
-
-    const menu =
-        document.getElementById("mobileMenu");
-
-    menu.classList.toggle("active");
-
-}
-
-
-/* =========================
-   WHATSAPP
-========================= */
-
-function shareWhatsApp(){
-
-    const text =
-        document.title +
-        " " +
-        window.location.href;
-
-    const url =
-        "https://wa.me/?text=" +
-        encodeURIComponent(text);
-
-    window.open(url, "_blank");
-
-}
-
-
-/* =========================
-   FACEBOOK
-========================= */
-
-function shareFacebook(){
-
-    const url =
-        "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(window.location.href);
-
-    window.open(
-        url,
-        "_blank",
-        "width=600,height=500"
-    );
-
-}
-
-
-/* =========================
-   COPY LINK
-========================= */
-
-function copyLink(){
-
-    navigator.clipboard.writeText(
-        window.location.href
-    ).then(function(){
-
-        alert("Link berita berhasil disalin.");
-
-    }).catch(function(){
-
-        alert("Gagal menyalin link.");
-
-    });
-
-}
-
-</script>
-
+        // Lazy Loading Optimization
+        if ('IntersectionObserver' in window) {
+            const images = document.querySelectorAll('img[loading="eager"]');
+            images.forEach(img => {
+                img.loading = 'lazy';
+            });
+        }
+    </script>
 </body>
 </html>
