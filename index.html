@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Muzi Adriyan — Detail Berita</title>
+
+<meta name="description" content="Berita terbaru dan informasi terkini dari Muzi Adriyan.">
+<meta name="author" content="Muzi Adriyan">
+<meta name="theme-color" content="#e21d2a">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eeeeee;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    width:100%;
+    background:#fff;
+    padding:20px 0 0;
+}
+
+.header-inner{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+}
+
+.logo-mark{
+    width:42px;
+    height:42px;
+    background:#e21d2a;
+    color:white;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    font-weight:900;
+    transform:rotate(-8deg);
+}
+
+.logo-text{
+    font-size:28px;
+    font-weight:900;
+    color:#222;
+    letter-spacing:-1px;
+}
+
+.logo-text span{
+    color:#e21d2a;
+}
+
+.logo-sub{
+    font-size:10px;
+    color:#777;
+    letter-spacing:2px;
+    margin-top:-5px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    width:92%;
+    max-width:1100px;
+    height:58px;
+    margin:25px auto 0;
+    background:#df202b;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding:0 15px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    margin-right:auto;
+    padding-left:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.menu-button{
+    width:48px;
+    height:42px;
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.04);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    cursor:pointer;
+}
+
+.menu-button span{
+    display:block;
+    width:25px;
+    height:2px;
+    background:white;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu{
+    display:none;
+    width:92%;
+    max-width:1100px;
+    margin:auto;
+    background:#c91824;
+}
+
+.mobile-menu.active{
+    display:block;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:13px 20px;
+    color:white;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container{
+    width:92%;
+    max-width:850px;
+    margin:40px auto 80px;
+}
+
+.breadcrumb{
+    color:#888;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.breadcrumb a{
+    color:#a83b43;
+    text-decoration:none;
+}
+
+.breadcrumb span{
+    margin:0 8px;
+}
+
+/* =========================
+   ARTICLE
+========================= */
+
+.article{
+    background:#fff;
+    padding:30px;
+    border-radius:4px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.category{
+    display:inline-block;
+    color:#df202b;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:12px;
+    text-transform:uppercase;
+}
+
+.article-title{
+    font-size:46px;
+    line-height:1.12;
+    color:#303030;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.meta{
+    color:#888;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.meta strong{
+    color:#555;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.hero{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    border-radius:15px;
+    background:#ddd;
+}
+
+.hero img{
+    display:block;
+    width:100%;
+    height:auto;
+    min-height:320px;
+    object-fit:cover;
+}
+
+.image-caption{
+    background:white;
+    padding:10px 14px;
+    color:#777;
+    font-size:12px;
+    border-left:4px solid #df202b;
+}
+
+/* =========================
+   SOCIAL QUOTE
+========================= */
+
+.social-quote{
+    position:absolute;
+    right:12px;
+    bottom:15px;
+    width:260px;
+    background:#fff;
+    color:#111;
+    padding:14px 16px;
+    border-radius:8px;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+    font-size:17px;
+    line-height:1.25;
+    font-weight:700;
+}
+
+.social-quote small{
+    display:block;
+    color:#df202b;
+    margin-top:7px;
+    font-size:13px;
+}
+
+/* =========================
+   ARTICLE BODY
+========================= */
+
+.article-body{
+    margin-top:28px;
+}
+
+.article-body p{
+    font-size:17px;
+    line-height:1.85;
+    margin-bottom:20px;
+    color:#444;
+}
+
+.article-body .lead{
+    font-weight:500;
+    font-size:18px;
+}
+
+.article-body h2{
+    font-size:25px;
+    margin:30px 0 14px;
+    color:#222;
+}
+
+.article-body blockquote{
+    margin:25px 0;
+    padding:18px 20px;
+    background:#f5f5f5;
+    border-left:5px solid #df202b;
+    font-size:18px;
+    font-style:italic;
+    color:#555;
+}
+
+/* =========================
+   SHARE
+========================= */
+
+.share{
+    border-top:1px solid #eee;
+    margin-top:30px;
+    padding-top:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.share strong{
+    margin-right:5px;
+}
+
+.share button{
+    border:0;
+    background:#222;
+    color:#fff;
+    padding:9px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.share button:hover{
+    opacity:.8;
+}
+
+/* =========================
+   RELATED
+========================= */
+
+.related{
+    margin-top:30px;
+}
+
+.related-title{
+    font-size:22px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.related-card{
+    background:#fff;
+    padding:18px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.related-card .tag{
+    color:#df202b;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.related-card h3{
+    font-size:17px;
+    line-height:1.35;
+    margin-top:5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#202020;
+    color:#aaa;
+    text-align:center;
+    padding:30px 20px;
+    font-size:13px;
+}
+
+footer strong{
+    color:white;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media(min-width:900px){
+
+    .article{
+        padding:40px;
+    }
+
+    .hero img{
+        max-height:560px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    body{
+        background:#f1f1f1;
+    }
+
+    .header{
+        padding-top:15px;
+    }
+
+    .header-inner{
+        width:90%;
+    }
+
+    .logo-mark{
+        width:35px;
+        height:35px;
+        font-size:21px;
+    }
+
+    .logo-text{
+        font-size:23px;
+    }
+
+    .logo-sub{
+        font-size:8px;
+    }
+
+    .navbar{
+        width:90%;
+        height:58px;
+        margin-top:20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .container{
+        width:90%;
+        margin-top:30px;
+    }
+
+    .breadcrumb{
+        font-size:13px;
+        margin-bottom:20px;
+    }
+
+    .article{
+        padding:0;
+        background:transparent;
+        box-shadow:none;
+    }
+
+    .category{
+        font-size:12px;
+    }
+
+    .article-title{
+        font-size:39px;
+        line-height:1.12;
+        margin-bottom:10px;
+    }
+
+    .meta{
+        font-size:13px;
+    }
+
+    .hero{
+        border-radius:14px;
+    }
+
+    .hero img{
+        min-height:0;
+        max-height:none;
+    }
+
+    .social-quote{
+        width:215px;
+        right:8px;
+        bottom:10px;
+        padding:11px 12px;
+        font-size:15px;
+    }
+
+    .social-quote small{
+        font-size:11px;
+    }
+
+    .image-caption{
+        font-size:11px;
+        padding:8px 10px;
+    }
+
+    .article-body{
+        background:#fff;
+        padding:22px 18px;
+        margin-top:10px;
+        border-radius:5px;
+    }
+
+    .article-body p{
+        font-size:16px;
+        line-height:1.75;
+    }
+
+    .article-body .lead{
+        font-size:17px;
+    }
+
+    .article-body h2{
+        font-size:22px;
+    }
+
+    .share{
+        padding:18px 0;
+    }
+
+    .related-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
+   VERY SMALL PHONE
+========================= */
+
+@media(max-width:380px){
+
+    .article-title{
+        font-size:34px;
+    }
+
+    .social-quote{
+        width:190px;
+        font-size:13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <a href="#" class="logo">
+
+            <div class="logo-mark">
+                M
+            </div>
+
+            <div>
+                <div class="logo-text">
+                    Muzi <span>Adriyan</span>
+                </div>
+
+                <div class="logo-sub">
+                    MNC.COM
+                </div>
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Daerah</a>
+            <a href="#">Teknologi</a>
+            <a href="#">Bisnis</a>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </nav>
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Daerah</a>
+        <a href="#">Teknologi</a>
+        <a href="#">Bisnis</a>
+    </div>
+
+</header>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main class="container">
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb">
+
+        <a href="#">News</a>
+
+        <span>/</span>
+
+        <a href="#">Daerah</a>
+
+        <span>/</span>
+
+        Detail Berita
+
+    </div>
+
+
+    <!-- ARTICLE -->
+
+    <article class="article">
+
+        <div class="category">
+            Daerah
+        </div>
+
+        <h1 class="article-title">
+            <h1 class="article-title">
+            Muzi Adriyan — Developer, Analyst & Investor
+</h1>
+        </h1>
+
+        <div class="meta">
+
+            <strong>Muzi Adriyan</strong>
+
+            • Minggu, 23 Agustus 2026
+            • 12:37 WIB
+
+        </div>
+
+
+        <!-- HERO IMAGE -->
+
+        <div class="hero">
+
+            <img
+                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=85"
+                alt="Ilustrasi kegiatan pendidikan dan sekolah"
+            >
+
+            <div class="social-quote">
+
+                Mungkin bagi yang tinggal di kota ini sederhana...
+
+                tapi buat anak-anak di daerah,
+                pendidikan bisa sangat bermakna.
+
+                <small>
+                    @MuziAdriyan
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="image-caption">
+            Ilustrasi kegiatan pendidikan dan pembangunan sekolah.
+            Foto: Muzi Adriyan
+        </div>
+
+
+        <!-- ARTICLE BODY -->
+
+        <div class="article-body">
+
+            <p class="lead">
+
+                SUMBA TIMUR — Perhatian terhadap dunia pendidikan
+                kembali menjadi sorotan. Pembangunan fasilitas
+                pendidikan di daerah menjadi salah satu langkah
+                penting untuk memberikan kesempatan belajar yang
+                lebih baik bagi anak-anak.
+
+            </p>
+
+            <p>
+
+                Kehadiran sekolah yang layak tidak hanya menjadi
+                tempat bagi siswa untuk mendapatkan pendidikan,
+                tetapi juga menjadi bagian penting dalam membangun
+                masa depan masyarakat di daerah.
+
+            </p>
+
+            <p>
+
+                Dalam kegiatan tersebut, pembangunan sekolah
+                menjadi simbol kepedulian terhadap pendidikan.
+                Anak-anak di daerah diharapkan dapat memiliki
+                lingkungan belajar yang lebih nyaman, aman,
+                dan mendukung proses belajar mereka.
+
+            </p>
+
+            <blockquote>
+
+                “Pendidikan bukan hanya tentang bangunan sekolah,
+                tetapi tentang memberikan kesempatan kepada anak-anak
+                untuk memiliki masa depan yang lebih baik.”
+
+            </blockquote>
+
+            <h2>
+                Pendidikan menjadi perhatian
+            </h2>
+
+            <p>
+
+                Pembangunan fasilitas pendidikan di wilayah yang
+                membutuhkan perhatian menjadi langkah yang memiliki
+                dampak jangka panjang.
+
+                Dengan fasilitas yang lebih memadai, siswa dapat
+                mengikuti kegiatan belajar dengan lebih nyaman dan
+                para tenaga pendidik juga dapat menjalankan proses
+                pembelajaran secara lebih optimal.
+
+            </p>
+
+            <p>
+
+                Masyarakat berharap berbagai upaya untuk meningkatkan
+                kualitas pendidikan dapat terus dilakukan dan
+                menjangkau lebih banyak wilayah di Indonesia.
+
+            </p>
+
+            <p>
+
+                Kisah tersebut juga menjadi pengingat bahwa
+                pendidikan memiliki peran besar dalam membuka
+                kesempatan bagi generasi muda untuk berkembang.
+
+            </p>
+
+            <h2>
+                Harapan untuk generasi muda
+            </h2>
+
+            <p>
+
+                Setiap anak memiliki hak untuk mendapatkan pendidikan
+                yang layak. Dukungan dari berbagai pihak menjadi
+                bagian penting untuk mewujudkan lingkungan pendidikan
+                yang lebih baik.
+
+            </p>
+
+            <p>
+
+                Dengan adanya perhatian terhadap pendidikan,
+                diharapkan semakin banyak anak-anak di berbagai
+                daerah dapat mengejar cita-cita dan membangun
+                masa depan mereka.
+
+            </p>
+
+        </div>
+
+
+        <!-- SHARE -->
+
+        <div class="share">
+
+            <strong>Bagikan:</strong>
+
+            <button onclick="shareWhatsApp()">
+                WhatsApp
+            </button>
+
+            <button onclick="shareFacebook()">
+                Facebook
+            </button>
+
+            <button onclick="copyLink()">
+                Salin Link
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =========================
+         RELATED NEWS
+    ========================= -->
+
+    <section class="related">
+
+        <h2 class="related-title">
+            Berita Terkait
+        </h2>
+
+        <div class="related-grid">
+
+            <div class="related-card">
+
+                <div class="tag">
+                    PENDIDIKAN
+                </div>
+
+                <h3>
+                    Pendidikan di Daerah Terus Mendapat Perhatian
+                </h3>
+
+            </div>
+
+
+            <div class="related-card">
+
+                <div class="tag">
+                    DAERAH
+                </div>
+
+                <h3>
+                    Semangat Anak-Anak Daerah Mengejar Pendidikan
+                </h3>
+
+            </div>
+
+
+            <div class="related-card">
+
+                <div class="tag">
+                    NEWS
+                </div>
+
+                <h3>
+                    Fasilitas Sekolah Menjadi Perhatian Masyarakat
+                </h3>
+
+            </div>
+
+
+            <div class="related-card">
+
+                <div class="tag">
+                    INSPIRASI
+                </div>
+
+                <h3>
+                    Kisah Inspiratif dari Dunia Pendidikan Indonesia
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>Muzi Adriyan</strong>
+
+    <br>
+
+    News & Digital
+
+    <br><br>
+
+    © 2026 Muzi Adriyan. All rights reserved.
+
+</footer>
+
+
+<script>
+
+/* =========================
+   MENU
+========================= */
+
+function toggleMenu(){
+
+    const menu =
+        document.getElementById("mobileMenu");
+
+    menu.classList.toggle("active");
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+function shareWhatsApp(){
+
+    const text =
+        document.title +
+        " " +
+        window.location.href;
+
+    const url =
+        "https://wa.me/?text=" +
+        encodeURIComponent(text);
+
+    window.open(url, "_blank");
+
+}
+
+
+/* =========================
+   FACEBOOK
+========================= */
+
+function shareFacebook(){
+
+    const url =
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(window.location.href);
+
+    window.open(
+        url,
+        "_blank",
+        "width=600,height=500"
+    );
+
+}
+
+
+/* =========================
+   COPY LINK
+========================= */
+
+function copyLink(){
+
+    navigator.clipboard.writeText(
+        window.location.href
+    ).then(function(){
+
+        alert("Link berita berhasil disalin.");
+
+    }).catch(function(){
+
+        alert("Gagal menyalin link.");
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
