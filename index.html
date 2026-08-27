@@ -1060,17 +1060,6 @@
     div.textContent = str;
     return div.innerHTML;
   }
-<script>
-document.getElementById("waBtn").addEventListener("click", function () {
-    const nomor = "6285692174059";
-    
-    const judul = document.querySelector(".article-title").textContent;
-    const pesan = "Halo, saya ingin menghubungi kamu.\n\nSaya melihat artikel: " + judul;
-
-    const url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
-
-    window.open(url, "_blank");
-});
 </script>
 
 </body>
