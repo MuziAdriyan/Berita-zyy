@@ -3,9 +3,112 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muzi Adriyan — Personal Website</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Muzi Adriyan — Teknologi, Digital & Berita</title>
+
+<meta name="description"
+      content="Website resmi Muzi Adriyan. Membahas teknologi, dunia digital, aktivitas, karya, dan informasi terkini.">
+
+<meta name="robots"
+      content="index, follow, max-image-preview:large">
+
+<meta name="author"
+      content="Muzi Adriyan">
+
+<!--
+GANTI DENGAN DOMAIN WEBSITE KAMU
+Contoh:
+https://muziadriyan.com/
+-->
+<link rel="canonical"
+      href="https://www.example.com/">
+
+<!-- OPEN GRAPH -->
+
+<meta property="og:type"
+      content="website">
+
+<meta property="og:title"
+      content="Muzi Adriyan — Teknologi & Digital">
+
+<meta property="og:description"
+      content="Website resmi Muzi Adriyan tentang teknologi, digital, aktivitas dan karya.">
+
+<meta property="og:url"
+      content="https://www.example.com/">
+
+<meta property="og:site_name"
+      content="Muzi Adriyan">
+
+<!--
+Jika sudah punya gambar preview:
+<meta property="og:image"
+      content="https://www.example.com/og-image.jpg">
+-->
+
+<!-- TWITTER / SOCIAL -->
+
+<meta name="twitter:card"
+      content="summary_large_image">
+
+<meta name="twitter:title"
+      content="Muzi Adriyan">
+
+<meta name="twitter:description"
+      content="Website resmi Muzi Adriyan.">
+
+<!-- FAVICON -->
+
+<link rel="icon"
+      href="favicon.png"
+      type="image/png">
+
+
+<!-- =================================================
+     STRUCTURED DATA
+================================================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "WebSite",
+      "@id": "https://www.example.com/#website",
+      "url": "https://www.example.com/",
+      "name": "Muzi Adriyan",
+      "description": "Website resmi Muzi Adriyan tentang teknologi, digital, aktivitas dan karya.",
+      "inLanguage": "id-ID"
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://www.example.com/#person",
+      "name": "Muzi Adriyan",
+      "url": "https://www.example.com/",
+      "jobTitle": "Digital Creator",
+      "image": "https://www.example.com/foto-muzi.jpg"
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.example.com/#organization",
+      "name": "Muzi Adriyan",
+      "url": "https://www.example.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.example.com/foto-muzi.jpg"
+      }
+    }
+
+  ]
+}
+</script>
+
 
 <style>
 
@@ -24,14 +127,21 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#090909;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:#080808;
+
     color:#fff;
+
     line-height:1.6;
 }
 
 a{
     text-decoration:none;
+
     color:inherit;
 }
 
@@ -42,14 +152,19 @@ a{
 
 header{
     position:sticky;
+
     top:0;
+
     z-index:999;
 
-    background:rgba(9,9,9,.94);
+    background:
+        rgba(8,8,8,.94);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:
+        blur(18px);
 
-    border-bottom:1px solid #252525;
+    border-bottom:
+        1px solid #222;
 }
 
 .nav{
@@ -57,17 +172,19 @@ header{
 
     margin:auto;
 
-    padding:18px 25px;
+    padding:17px 22px;
 
     display:flex;
-    align-items:center;
+
     justify-content:space-between;
+
+    align-items:center;
 }
 
 .logo{
     color:#e52b35;
 
-    font-size:27px;
+    font-size:26px;
 
     font-weight:800;
 
@@ -99,9 +216,11 @@ header{
     display:none;
 
     width:42px;
+
     height:42px;
 
-    border:1px solid #333;
+    border:
+        1px solid #333;
 
     border-radius:12px;
 
@@ -110,6 +229,7 @@ header{
     cursor:pointer;
 
     align-items:center;
+
     justify-content:center;
 
     flex-direction:column;
@@ -119,17 +239,16 @@ header{
 
 .hamburger span{
     width:20px;
+
     height:2px;
 
     background:#fff;
 
-    border-radius:10px;
+    border-radius:5px;
 }
 
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+/* MOBILE MENU */
 
 .mobile-menu{
     display:none;
@@ -138,7 +257,7 @@ header{
 
     border-top:1px solid #222;
 
-    padding:15px 25px;
+    padding:10px 22px;
 }
 
 .mobile-menu a{
@@ -151,10 +270,6 @@ header{
     border-bottom:1px solid #222;
 }
 
-.mobile-menu a:last-child{
-    border-bottom:0;
-}
-
 
 /* =====================================================
    HERO
@@ -165,21 +280,22 @@ header{
 
     margin:auto;
 
-    padding:80px 25px;
+    padding:80px 22px;
 
     display:grid;
 
-    grid-template-columns:1fr .85fr;
+    grid-template-columns:
+        1fr .85fr;
 
     gap:55px;
 
     align-items:center;
 }
 
-.hero-small{
+.eyebrow{
     color:#777;
 
-    font-size:13px;
+    font-size:12px;
 
     text-transform:uppercase;
 
@@ -200,17 +316,17 @@ header{
     color:#e52b35;
 }
 
-.hero-text{
+.hero-description{
     color:#999;
 
     font-size:18px;
 
     margin-top:22px;
 
-    max-width:580px;
+    max-width:600px;
 }
 
-.hero-buttons{
+.buttons{
     display:flex;
 
     gap:12px;
@@ -237,19 +353,21 @@ header{
 .btn:hover{
     transform:translateY(-3px);
 
-    box-shadow:0 12px 35px rgba(229,43,53,.25);
+    box-shadow:
+        0 12px 35px
+        rgba(229,43,53,.25);
 }
 
 .btn-outline{
-    background:transparent;
+    background:#111;
 
     border:1px solid #333;
 
-    color:#bbb;
+    color:#aaa;
 }
 
 .btn-outline:hover{
-    background:#151515;
+    background:#181818;
 
     border-color:#555;
 
@@ -257,45 +375,50 @@ header{
 }
 
 
-/* PROFILE */
+/* FOTO */
 
 .profile-box{
     position:relative;
 }
 
 .profile{
+    display:block;
+
     width:100%;
 
     aspect-ratio:4/5;
 
     object-fit:cover;
 
-    border-radius:30px;
+    border-radius:28px;
 
     border:1px solid #333;
 
-    box-shadow:0 30px 80px rgba(0,0,0,.6);
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.6);
 }
 
 .profile-label{
     position:absolute;
 
-    bottom:18px;
-    left:18px;
+    left:15px;
 
-    padding:10px 15px;
+    bottom:15px;
 
-    border-radius:14px;
+    padding:9px 14px;
 
-    background:rgba(0,0,0,.75);
+    background:
+        rgba(0,0,0,.75);
 
-    backdrop-filter:blur(10px);
+    border:
+        1px solid #333;
 
-    border:1px solid #333;
+    border-radius:12px;
 
-    color:#ccc;
+    color:#bbb;
 
-    font-size:13px;
+    font-size:12px;
 }
 
 
@@ -308,15 +431,13 @@ section{
 
     margin:auto;
 
-    padding:70px 25px;
+    padding:70px 22px;
 }
 
 .section-title{
     font-size:37px;
 
-    margin-bottom:30px;
-
-    letter-spacing:-1px;
+    margin-bottom:28px;
 }
 
 .section-title span{
@@ -328,22 +449,22 @@ section{
    ABOUT
 ===================================================== */
 
-.about-box{
+.about{
     background:#111;
 
-    border:1px solid #252525;
+    border:1px solid #242424;
 
-    border-radius:25px;
+    border-radius:24px;
 
-    padding:35px;
+    padding:32px;
 
     color:#aaa;
 
-    font-size:17px;
+    font-size:16px;
 }
 
-.about-box p + p{
-    margin-top:20px;
+.about p + p{
+    margin-top:18px;
 }
 
 
@@ -356,9 +477,11 @@ section{
 
     background:#0d0d0d;
 
-    border-top:1px solid #181818;
+    border-top:
+        1px solid #191919;
 
-    border-bottom:1px solid #181818;
+    border-bottom:
+        1px solid #191919;
 }
 
 .news-inner{
@@ -366,36 +489,31 @@ section{
 
     margin:auto;
 
-    padding:70px 25px;
+    padding:70px 22px;
 }
 
-
-/* NEWS HEADER */
-
-.news-heading{
+.news-header{
     display:flex;
-
-    align-items:flex-end;
 
     justify-content:space-between;
 
-    gap:20px;
+    align-items:end;
 
     margin-bottom:25px;
 }
 
-.news-heading h2{
+.news-header h2{
     font-size:40px;
 
     line-height:1.1;
 }
 
-.news-heading h2 span{
+.news-header h2 span{
     color:#e52b35;
 }
 
 .live{
-    color:#888;
+    color:#777;
 
     font-size:12px;
 
@@ -406,81 +524,61 @@ section{
     gap:7px;
 }
 
-.live-dot{
+.dot{
     width:8px;
-    height:8px;
 
-    background:#e52b35;
+    height:8px;
 
     border-radius:50%;
 
-    box-shadow:0 0 12px rgba(229,43,53,.8);
+    background:#e52b35;
 
-    animation:livePulse 1.5s infinite;
-}
-
-@keyframes livePulse{
-
-    0%,100%{
-        opacity:1;
-    }
-
-    50%{
-        opacity:.3;
-    }
-
+    box-shadow:
+        0 0 12px
+        rgba(229,43,53,.8);
 }
 
 
 /* =====================================================
-   NEWS TABS
+   CATEGORY
 ===================================================== */
 
-.news-tabs{
+.categories{
     display:flex;
 
-    gap:10px;
+    gap:9px;
 
     overflow-x:auto;
 
-    padding-bottom:10px;
+    scrollbar-width:none;
 
     margin-bottom:25px;
-
-    scrollbar-width:none;
 }
 
-.news-tabs::-webkit-scrollbar{
+.categories::-webkit-scrollbar{
     display:none;
 }
 
-.news-tab{
-    white-space:nowrap;
+.category{
+    flex:none;
 
-    padding:10px 17px;
+    border:
+        1px solid #292929;
 
-    border-radius:25px;
-
-    background:#171717;
-
-    border:1px solid #292929;
+    background:#151515;
 
     color:#999;
 
-    cursor:pointer;
+    padding:9px 16px;
+
+    border-radius:25px;
 
     font-size:13px;
 
-    transition:.3s;
+    cursor:pointer;
 }
 
-.news-tab:hover{
-    color:#fff;
-
-    border-color:#444;
-}
-
-.news-tab.active{
+.category.active{
     background:#e52b35;
 
     border-color:#e52b35;
@@ -490,7 +588,7 @@ section{
 
 
 /* =====================================================
-   NEWS LIST
+   NEWS CARDS
 ===================================================== */
 
 .news-list{
@@ -501,19 +599,17 @@ section{
     gap:14px;
 }
 
-
-/* CARD */
-
 .news-card{
     display:flex;
 
-    min-height:170px;
+    min-height:155px;
 
     background:#121212;
 
-    border:1px solid #292929;
+    border:
+        1px solid #292929;
 
-    border-radius:22px;
+    border-radius:20px;
 
     overflow:hidden;
 
@@ -524,67 +620,21 @@ section{
     transform:translateY(-3px);
 
     border-color:#444;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
+.news-thumb{
+    width:190px;
 
-/* =====================================================
-   NEWS IMAGE
-===================================================== */
+    min-width:190px;
 
-.news-image{
-    width:220px;
-
-    min-width:220px;
-
-    height:170px;
-
-    position:relative;
-
-    overflow:hidden;
+    height:155px;
 
     background:
         linear-gradient(
             135deg,
-            #292929,
-            #101010
+            #48151a,
+            #111
         );
-}
-
-.news-image img{
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-}
-
-.news-image::after{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.35),
-        transparent
-    );
-
-    pointer-events:none;
-}
-
-
-/* PLACEHOLDER */
-
-.placeholder{
-    width:100%;
-
-    height:100%;
 
     display:flex;
 
@@ -592,64 +642,29 @@ section{
 
     justify-content:center;
 
-    font-size:25px;
+    overflow:hidden;
+}
+
+.news-thumb img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.thumb-text{
+    color:#444;
+
+    font-size:22px;
 
     font-weight:900;
 
-    color:#444;
-
-    letter-spacing:3px;
+    letter-spacing:2px;
 }
-
-.placeholder.red{
-    background:
-        radial-gradient(
-            circle at 20% 20%,
-            #7d1e26,
-            transparent 45%
-        ),
-        #161616;
-}
-
-.placeholder.blue{
-    background:
-        radial-gradient(
-            circle at 70% 30%,
-            #16466f,
-            transparent 45%
-        ),
-        #111;
-}
-
-.placeholder.green{
-    background:
-        radial-gradient(
-            circle at 30% 70%,
-            #17503a,
-            transparent 45%
-        ),
-        #111;
-}
-
-.placeholder.gold{
-    background:
-        radial-gradient(
-            circle at 70% 40%,
-            #665019,
-            transparent 45%
-        ),
-        #111;
-}
-
-
-/* =====================================================
-   NEWS CONTENT
-===================================================== */
 
 .news-content{
-    flex:1;
-
-    padding:22px 24px;
+    padding:20px;
 
     display:flex;
 
@@ -658,26 +673,26 @@ section{
     justify-content:center;
 }
 
-
-/* SOURCE */
-
-.news-source{
+.source{
     display:flex;
 
     align-items:center;
 
-    gap:9px;
+    gap:8px;
 
     color:#999;
 
-    font-size:13px;
+    font-size:12px;
 
-    margin-bottom:9px;
+    margin-bottom:8px;
 }
 
 .source-logo{
-    width:24px;
-    height:24px;
+    width:22px;
+
+    height:22px;
+
+    background:#e52b35;
 
     border-radius:6px;
 
@@ -687,196 +702,35 @@ section{
 
     justify-content:center;
 
-    background:#e52b35;
-
-    color:#fff;
-
     font-weight:bold;
 
-    font-size:13px;
+    color:#fff;
 }
 
-.source-logo.kompas{
-    background:#2269a9;
-}
-
-.source-logo.antara{
-    background:#168447;
-}
-
-.source-logo.tech{
-    background:#5c3db5;
-}
-
-
-/* TITLE */
-
-.news-title{
-    font-size:20px;
+.news-card h3{
+    font-size:19px;
 
     line-height:1.35;
 
-    color:#f2f2f2;
-
-    font-weight:700;
-
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
-
-/* META */
-
-.news-meta{
+.meta{
     color:#666;
 
     font-size:12px;
 
-    margin-bottom:14px;
+    margin-bottom:12px;
 }
 
-
-/* BUTTON */
-
-.read-news{
+.read{
     width:max-content;
 
-    padding:8px 14px;
-
-    border:1px solid #333;
-
-    border-radius:20px;
-
-    color:#aaa;
+    color:#e52b35;
 
     font-size:12px;
 
-    transition:.3s;
-}
-
-.read-news:hover{
-    background:#e52b35;
-
-    border-color:#e52b35;
-
-    color:#fff;
-}
-
-
-/* =====================================================
-   FEATURE NEWS
-===================================================== */
-
-.feature-news{
-    display:grid;
-
-    grid-template-columns:1.5fr 1fr;
-
-    gap:14px;
-
-    margin-bottom:14px;
-}
-
-.feature-card{
-    min-height:270px;
-
-    border-radius:22px;
-
-    overflow:hidden;
-
-    position:relative;
-
-    background:#151515;
-
-    border:1px solid #292929;
-}
-
-.feature-card .feature-bg{
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #5a171e,
-            #101010 70%
-        );
-}
-
-.feature-card.blue .feature-bg{
-    background:
-        linear-gradient(
-            135deg,
-            #123d62,
-            #101010 70%
-        );
-}
-
-.feature-content{
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    padding:25px;
-
-    background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,.95)
-        );
-}
-
-.feature-source{
-    font-size:12px;
-
-    color:#bbb;
-
-    margin-bottom:8px;
-}
-
-.feature-title{
-    font-size:25px;
-
-    line-height:1.25;
-
-    font-weight:800;
-}
-
-
-/* =====================================================
-   NEWS FOOTER
-===================================================== */
-
-.news-more{
-    text-align:center;
-
-    margin-top:30px;
-}
-
-.news-more a{
-    display:inline-block;
-
-    padding:12px 22px;
-
-    border:1px solid #333;
-
-    border-radius:25px;
-
-    color:#aaa;
-
-    font-size:13px;
-
-    transition:.3s;
-}
-
-.news-more a:hover{
-    background:#e52b35;
-
-    color:#fff;
-
-    border-color:#e52b35;
+    font-weight:bold;
 }
 
 
@@ -885,23 +739,17 @@ section{
 ===================================================== */
 
 footer{
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:45px 25px;
-
     text-align:center;
+
+    padding:45px 20px;
 
     color:#666;
 
-    font-size:13px;
+    border-top:1px solid #222;
 }
 
-.footer-name{
+footer strong{
     color:#e52b35;
-
-    font-weight:bold;
 }
 
 
@@ -912,7 +760,8 @@ footer{
 @media(max-width:700px){
 
     .nav{
-        padding:15px 18px;
+        padding:
+            15px 18px;
     }
 
     .logo{
@@ -932,7 +781,8 @@ footer{
 
         flex-direction:column;
 
-        padding:55px 18px;
+        padding:
+            55px 18px;
 
         gap:35px;
     }
@@ -941,53 +791,51 @@ footer{
         font-size:43px;
     }
 
-    .hero-text{
+    .hero-description{
         font-size:16px;
     }
 
-    .profile{
-        aspect-ratio:4/4.5;
-    }
-
     section{
-        padding:55px 18px;
+        padding:
+            55px 18px;
     }
 
     .section-title{
         font-size:30px;
     }
 
-    .about-box{
-        padding:25px;
+    .about{
+        padding:24px;
 
         font-size:15px;
     }
 
     .news-inner{
-        padding:55px 15px;
+        padding:
+            55px 15px;
     }
 
-    .news-heading h2{
+    .news-header h2{
         font-size:30px;
     }
 
     .news-card{
-        min-height:125px;
+        min-height:120px;
     }
 
-    .news-image{
-        width:115px;
+    .news-thumb{
+        width:105px;
 
-        min-width:115px;
+        min-width:105px;
 
-        height:125px;
+        height:120px;
     }
 
     .news-content{
         padding:13px;
     }
 
-    .news-title{
+    .news-card h3{
         font-size:14px;
 
         display:-webkit-box;
@@ -999,66 +847,17 @@ footer{
         overflow:hidden;
     }
 
-    .news-source{
-        font-size:10px;
-
-        margin-bottom:5px;
-    }
-
-    .source-logo{
-        width:19px;
-        height:19px;
-
+    .source{
         font-size:10px;
     }
 
-    .news-meta{
-        font-size:10px;
-
-        margin-bottom:8px;
-    }
-
-    .read-news{
-        padding:6px 10px;
-
+    .meta{
         font-size:10px;
     }
 
-    .feature-news{
-        grid-template-columns:1fr;
+    .read{
+        font-size:10px;
     }
-
-    .feature-card{
-        min-height:220px;
-    }
-
-    .feature-title{
-        font-size:20px;
-    }
-
-}
-
-
-/* =====================================================
-   SMALL PHONE
-===================================================== */
-
-@media(max-width:380px){
-
-    .hero h1{
-        font-size:37px;
-    }
-
-    .news-image{
-        width:95px;
-
-        min-width:95px;
-    }
-
-    .news-title{
-        font-size:13px;
-    }
-
 }
 
 </style>
@@ -1069,168 +868,157 @@ footer{
 <body>
 
 
-<!-- =====================================================
+<!-- =================================================
      HEADER
-===================================================== -->
+================================================= -->
 
 <header>
 
-    <div class="nav">
+<div class="nav">
 
-        <div class="logo">
-            Muzi Adriyan
-        </div>
-
-        <nav class="menu">
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                Tentang
-            </a>
-
-            <a href="#berita">
-                Berita
-            </a>
-
-        </nav>
-
-
-        <button
-            class="hamburger"
-            onclick="toggleMenu()"
-            aria-label="Buka menu"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
+    <div class="logo">
+        Muzi Adriyan
     </div>
 
+    <nav class="menu">
 
-    <div
-        class="mobile-menu"
-        id="mobileMenu"
-    >
-
-        <a href="#home" onclick="closeMenu()">
+        <a href="#home">
             Home
         </a>
 
-        <a href="#about" onclick="closeMenu()">
+        <a href="#tentang">
             Tentang
         </a>
 
-        <a href="#berita" onclick="closeMenu()">
+        <a href="#berita">
             Berita
         </a>
 
-    </div>
+    </nav>
+
+
+    <button
+        class="hamburger"
+        onclick="toggleMenu()"
+        aria-label="Menu"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+</div>
+
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+    <a href="#home">
+        Home
+    </a>
+
+    <a href="#tentang">
+        Tentang
+    </a>
+
+    <a href="#berita">
+        Berita
+    </a>
+
+</div>
 
 </header>
 
 
 
-<!-- =====================================================
+<!-- =================================================
      HERO
-===================================================== -->
+================================================= -->
 
-<main id="home">
+<main>
 
-<section class="hero">
+<section
+    id="home"
+    class="hero"
+>
 
+<div>
 
-    <div>
-
-        <div class="hero-small">
-            Personal Website
-        </div>
-
-
-        <h1>
-
-            Halo, saya
-
-            <br>
-
-            <span>
-                Muzi Adriyan.
-            </span>
-
-        </h1>
-
-
-        <p class="hero-text">
-
-            Selamat datang di website pribadi saya.
-            Tempat untuk mengenal aktivitas, karya digital,
-            dan informasi menarik seputar dunia teknologi.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a
-                href="#berita"
-                class="btn"
-            >
-                Lihat Berita →
-            </a>
-
-
-            <a
-                href="#about"
-                class="btn btn-outline"
-            >
-                Tentang Saya
-            </a>
-
-        </div>
-
+    <div class="eyebrow">
+        Website Resmi
     </div>
 
 
+    <h1>
 
-    <div class="profile-box">
+        Halo, saya
 
-        <!--
-        FOTO PROFIL
+        <br>
 
-        Simpan foto kamu dengan nama:
+        <span>
+            Muzi Adriyan.
+        </span>
 
-        foto-muzi.jpg
+    </h1>
 
-        di folder yang sama dengan index.html
-        -->
 
-        <img
-            class="profile"
-            src="foto-muzi.jpg"
-            alt="Foto Muzi Adriyan"
-            onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#55151b,#111)'"
+    <p class="hero-description">
+
+        Website pribadi yang membahas teknologi,
+        dunia digital, aktivitas, karya,
+        dan informasi menarik.
+
+    </p>
+
+
+    <div class="buttons">
+
+        <a
+            href="#berita"
+            class="btn"
         >
+            Baca Berita →
+        </a>
 
-        <div class="profile-label">
-            Muzi Adriyan · Digital Creator
-        </div>
+        <a
+            href="#tentang"
+            class="btn btn-outline"
+        >
+            Tentang Saya
+        </a>
 
     </div>
+
+</div>
+
+
+<div class="profile-box">
+
+    <img
+        src="foto-muzi.jpg"
+        alt="Muzi Adriyan"
+        class="profile"
+    >
+
+    <div class="profile-label">
+        Muzi Adriyan · Digital Creator
+    </div>
+
+</div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =================================================
      ABOUT
-===================================================== -->
+================================================= -->
 
-<section id="about">
+<section id="tentang">
 
     <h2 class="section-title">
 
@@ -1240,25 +1028,19 @@ footer{
     </h2>
 
 
-    <div class="about-box">
+    <div class="about">
 
         <p>
-
-            Dunia teknologi berkembang begitu cepat.
-            Generasi muda saat ini memiliki kesempatan
-            yang luas untuk belajar dan berkarya
-            di bidang digital.
-
+            Saya Muzi Adriyan. Website ini menjadi
+            tempat untuk membagikan aktivitas,
+            karya digital, pengalaman belajar,
+            serta informasi yang saya anggap menarik.
         </p>
 
-
         <p>
-
-            Website ini dibuat sebagai tempat untuk
-            memperkenalkan Muzi Adriyan, aktivitas digital,
-            karya, serta informasi menarik yang
-            dapat dibaca oleh pengunjung.
-
+            Saya tertarik pada perkembangan teknologi
+            dan dunia digital serta terus belajar
+            untuk menghasilkan karya yang bermanfaat.
         </p>
 
     </div>
@@ -1267,9 +1049,9 @@ footer{
 
 
 
-<!-- =====================================================
-     NEWS
-===================================================== -->
+<!-- =================================================
+     BERITA
+================================================= -->
 
 <section
     id="berita"
@@ -1279,68 +1061,62 @@ footer{
 <div class="news-inner">
 
 
-    <!-- NEWS HEADER -->
-
-    <div class="news-heading">
+    <div class="news-header">
 
         <div>
 
-            <div class="hero-small">
-                Update Terbaru
+            <div class="eyebrow">
+                Artikel Terbaru
             </div>
 
             <h2>
-
                 Berita
-                <span>Terkini</span>
-
+                <span>Muzi</span>
             </h2>
 
         </div>
 
-
         <div class="live">
 
-            <span class="live-dot"></span>
+            <span class="dot"></span>
 
-            LIVE
+            TERBARU
 
         </div>
 
     </div>
 
 
+    <!-- CATEGORY -->
 
-    <!-- NEWS TABS -->
-
-    <div class="news-tabs">
+    <div class="categories">
 
         <button
-            class="news-tab active"
+            class="category active"
             onclick="filterNews('semua',this)"
         >
             Untuk Anda
         </button>
 
         <button
-            class="news-tab"
-            onclick="filterNews('nasional',this)"
-        >
-            Nasional
-        </button>
-
-        <button
-            class="news-tab"
+            class="category"
             onclick="filterNews('teknologi',this)"
         >
             Teknologi
         </button>
 
         <button
-            class="news-tab"
-            onclick="filterNews('politik',this)"
+            class="category"
+            onclick="filterNews('digital',this)"
         >
-            Politik
+            Digital
+        </button>
+
+        <button
+            class="category"
+            onclick="filterNews('opini',this)"
+        >
+            Opini
         </button>
 
     </div>
@@ -1348,335 +1124,26 @@ footer{
 
 
     <!-- =================================================
-         BERITA UTAMA
+         ARTIKEL ASLI WEBSITE
+         
+         PENTING:
+         Link diarahkan ke artikel milik website sendiri.
     ================================================= -->
 
-    <div class="feature-news">
-
-
-        <!-- FEATURE 1 -->
-
-        <article
-            class="feature-card"
-            data-category="nasional politik"
-        >
-
-            <div class="feature-bg"></div>
-
-            <div class="feature-content">
-
-                <div class="feature-source">
-
-                    🔴 detikNews · Berita Utama
-
-                </div>
-
-                <div class="feature-title">
-
-                    Botok Pati dkk Kecewa Ketua DPR
-                    Tak Temui Massa Aksi
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- FEATURE 2 -->
-
-        <article
-            class="feature-card blue"
-            data-category="nasional politik"
-        >
-
-            <div class="feature-bg"></div>
-
-            <div class="feature-content">
-
-                <div class="feature-source">
-
-                    🔵 Kompas.com · Nasional
-
-                </div>
-
-                <div class="feature-title">
-
-                    Akhir Polemik Rekening Botok Pati
-
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
-
-
-
-    <!-- =================================================
-         NEWS LIST
-    ================================================= -->
 
     <div class="news-list">
 
 
-        <!-- NEWS 1 -->
-
-        <article
-            class="news-card"
-            data-category="nasional politik"
-        >
-
-            <div class="news-image">
-
-                <div class="placeholder red">
-                    NEWS
-                </div>
-
-            </div>
-
-
-            <div class="news-content">
-
-                <div class="news-source">
-
-                    <span class="source-logo">
-                        d
-                    </span>
-
-                    detikNews
-
-                </div>
-
-
-                <div class="news-title">
-
-                    Botok Pati dkk Kecewa Ketua DPR
-                    Tak Temui Massa Aksi, Puan Bilang Begini
-
-                </div>
-
-
-                <div class="news-meta">
-
-                    Hari ini · Nasional
-
-                </div>
-
-
-                <a
-                    class="read-news"
-                    href="https://www.detik.com/search/searchall?query=Botok%20Pati%20Ketua%20DPR"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Baca berita asli →
-
-                </a>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- NEWS 2 -->
-
-        <article
-            class="news-card"
-            data-category="nasional"
-        >
-
-            <div class="news-image">
-
-                <div class="placeholder blue">
-                    NEWS
-                </div>
-
-            </div>
-
-
-            <div class="news-content">
-
-                <div class="news-source">
-
-                    <span class="source-logo kompas">
-                        K
-                    </span>
-
-                    Kompas.com
-
-                </div>
-
-
-                <div class="news-title">
-
-                    Akhir Polemik Rekening Botok Pati:
-                    Polisi Ungkap Alasan Blokir,
-                    Bank Mandiri Pulihkan Kembali
-
-                </div>
-
-
-                <div class="news-meta">
-
-                    Hari ini · Nasional
-
-                </div>
-
-
-                <a
-                    class="read-news"
-                    href="https://www.kompas.com/search/?query=Botok%20Pati"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Baca berita asli →
-
-                </a>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- NEWS 3 -->
-
-        <article
-            class="news-card"
-            data-category="politik nasional"
-        >
-
-            <div class="news-image">
-
-                <div class="placeholder gold">
-                    DPR
-                </div>
-
-            </div>
-
-
-            <div class="news-content">
-
-                <div class="news-source">
-
-                    <span class="source-logo">
-                        d
-                    </span>
-
-                    detikNews
-
-                </div>
-
-
-                <div class="news-title">
-
-                    Botok Pati dkk Naik ke Balkon
-                    Rapat Paripurna DPR 27 Agustus
-
-                </div>
-
-
-                <div class="news-meta">
-
-                    Hari ini · Politik
-
-                </div>
-
-
-                <a
-                    class="read-news"
-                    href="https://www.detik.com/search/searchall?query=Botok%20Pati%20Rapat%20Paripurna"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Baca berita asli →
-
-                </a>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- NEWS 4 -->
-
-        <article
-            class="news-card"
-            data-category="politik nasional"
-        >
-
-            <div class="news-image">
-
-                <div class="placeholder red">
-                    DPR
-                </div>
-
-            </div>
-
-
-            <div class="news-content">
-
-                <div class="news-source">
-
-                    <span class="source-logo">
-                        d
-                    </span>
-
-                    detikNews
-
-                </div>
-
-
-                <div class="news-title">
-
-                    Pimpinan DPR Komitmen RUU
-                    Perampasan Aset Diketok 15 Desember
-
-                </div>
-
-
-                <div class="news-meta">
-
-                    Hari ini · Politik
-
-                </div>
-
-
-                <a
-                    class="read-news"
-                    href="https://www.detik.com/search/searchall?query=RUU%20Perampasan%20Aset"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Baca berita asli →
-
-                </a>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- NEWS 5 -->
+        <!-- ARTIKEL 1 -->
 
         <article
             class="news-card"
             data-category="teknologi"
         >
 
-            <div class="news-image">
+            <div class="news-thumb">
 
-                <div class="placeholder blue">
+                <div class="thumb-text">
                     TECH
                 </div>
 
@@ -1685,40 +1152,39 @@ footer{
 
             <div class="news-content">
 
-                <div class="news-source">
+                <div class="source">
 
-                    <span class="source-logo tech">
-                        T
+                    <span class="source-logo">
+                        M
                     </span>
 
-                    Teknologi
+                    Muzi Adriyan
 
                 </div>
 
 
-                <div class="news-title">
+                <h3>
 
                     Perkembangan Teknologi Digital
-                    dan AI Terus Bertumbuh
+                    dan Peluang Generasi Muda
 
-                </div>
+                </h3>
 
 
-                <div class="news-meta">
+                <div class="meta">
 
-                    Teknologi · Terbaru
+                    27 Agustus 2026 · Teknologi
+                    · 5 menit membaca
 
                 </div>
 
 
                 <a
-                    class="read-news"
-                    href="https://news.google.com/search?q=teknologi%20Indonesia"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="artikel-teknologi.html"
+                    class="read"
                 >
 
-                    Lihat berita →
+                    Baca artikel →
 
                 </a>
 
@@ -1728,17 +1194,17 @@ footer{
 
 
 
-        <!-- NEWS 6 -->
+        <!-- ARTIKEL 2 -->
 
         <article
             class="news-card"
-            data-category="nasional"
+            data-category="digital"
         >
 
-            <div class="news-image">
+            <div class="news-thumb">
 
-                <div class="placeholder green">
-                    NEWS
+                <div class="thumb-text">
+                    DIGITAL
                 </div>
 
             </div>
@@ -1746,40 +1212,99 @@ footer{
 
             <div class="news-content">
 
-                <div class="news-source">
+                <div class="source">
 
-                    <span class="source-logo antara">
-                        A
+                    <span class="source-logo">
+                        M
                     </span>
 
-                    ANTARA
+                    Muzi Adriyan
 
                 </div>
 
 
-                <div class="news-title">
+                <h3>
 
-                    Gedung DPR Terbuka untuk
-                    Menerima Aspirasi Masyarakat
+                    Cara Generasi Muda
+                    Memanfaatkan Dunia Digital
 
-                </div>
+                </h3>
 
 
-                <div class="news-meta">
+                <div class="meta">
 
-                    Hari ini · Nasional
+                    27 Agustus 2026 · Digital
+                    · 4 menit membaca
 
                 </div>
 
 
                 <a
-                    class="read-news"
-                    href="https://www.antaranews.com/search?q=aspirasi%20DPR"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="artikel-digital.html"
+                    class="read"
                 >
 
-                    Baca berita asli →
+                    Baca artikel →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ARTIKEL 3 -->
+
+        <article
+            class="news-card"
+            data-category="opini"
+        >
+
+            <div class="news-thumb">
+
+                <div class="thumb-text">
+                    OPINI
+                </div>
+
+            </div>
+
+
+            <div class="news-content">
+
+                <div class="source">
+
+                    <span class="source-logo">
+                        M
+                    </span>
+
+                    Muzi Adriyan
+
+                </div>
+
+
+                <h3>
+
+                    Mengapa Belajar Teknologi
+                    Menjadi Penting di Era Digital?
+
+                </h3>
+
+
+                <div class="meta">
+
+                    27 Agustus 2026 · Opini
+                    · 4 menit membaca
+
+                </div>
+
+
+                <a
+                    href="artikel-opini.html"
+                    class="read"
+                >
+
+                    Baca artikel →
 
                 </a>
 
@@ -1792,22 +1317,19 @@ footer{
 
 
 
-    <!-- MORE -->
+    <div
+        style="
+        text-align:center;
+        margin-top:30px;
+        color:#666;
+        font-size:12px;
+        "
+    >
 
-    <div class="news-more">
-
-        <a
-            href="https://news.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            Lihat lebih banyak berita →
-
-        </a>
+        Artikel diterbitkan dan dikelola
+        oleh Muzi Adriyan.
 
     </div>
-
 
 </div>
 
@@ -1817,17 +1339,17 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =================================================
      FOOTER
-===================================================== -->
+================================================= -->
 
 <footer>
 
     © 2026
 
-    <span class="footer-name">
+    <strong>
         Muzi Adriyan
-    </span>
+    </strong>
 
     — Personal Website
 
@@ -1835,107 +1357,110 @@ footer{
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
-
-/* =====================================================
+/* =================================================
    MOBILE MENU
-===================================================== */
+================================================= */
 
 function toggleMenu(){
 
     const menu =
-        document.getElementById("mobileMenu");
+        document.getElementById(
+            "mobileMenu"
+        );
 
-    if(menu.style.display === "block"){
+    if(
+        menu.style.display === "block"
+    ){
 
-        menu.style.display = "none";
+        menu.style.display =
+            "none";
 
     }else{
 
-        menu.style.display = "block";
+        menu.style.display =
+            "block";
 
     }
 
 }
 
 
-function closeMenu(){
+/* =================================================
+   FILTER ARTIKEL
+================================================= */
 
-    document.getElementById(
-        "mobileMenu"
-    ).style.display = "none";
-
-}
-
-
-
-/* =====================================================
-   FILTER BERITA
-===================================================== */
-
-function filterNews(category, button){
+function filterNews(
+    category,
+    button
+){
 
     const cards =
         document.querySelectorAll(
-            ".news-card, .feature-card"
+            ".news-card"
         );
-
 
     const buttons =
         document.querySelectorAll(
-            ".news-tab"
+            ".category"
         );
 
 
-    /* RESET BUTTON */
+    buttons.forEach(
+        function(btn){
 
-    buttons.forEach(btn => {
-
-        btn.classList.remove("active");
-
-    });
-
-
-    button.classList.add("active");
-
-
-    /* FILTER */
-
-    cards.forEach(card => {
-
-        const categories =
-            card.dataset.category || "";
-
-
-        if(category === "semua"){
-
-            card.style.display = "";
+            btn.classList.remove(
+                "active"
+            );
 
         }
+    );
 
-        else if(
-            categories.includes(category)
-        ){
 
-            card.style.display = "";
+    button.classList.add(
+        "active"
+    );
+
+
+    cards.forEach(
+        function(card){
+
+            const categories =
+                card.dataset.category;
+
+
+            if(
+                category === "semua"
+            ){
+
+                card.style.display =
+                    "flex";
+
+            }
+
+            else if(
+                categories.includes(
+                    category
+                )
+            ){
+
+                card.style.display =
+                    "flex";
+
+            }
+
+            else{
+
+                card.style.display =
+                    "none";
+
+            }
 
         }
-
-        else{
-
-            card.style.display = "none";
-
-        }
-
-    });
+    );
 
 }
-
 
 </script>
 
